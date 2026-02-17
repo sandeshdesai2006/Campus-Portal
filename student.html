@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartCampus Portal | College Management System</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="student.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">🎓 SmartCampus</h2>
+
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#students">Students</a>
+      <a href="#attendance">Attendance</a>
+      <a href="#results">Results</a>
+      <a href="#events">Events</a>
+      <a href="#library">Library</a>
+      <a href="#feedback">Feedback</a>
+      <a href="login.html">Logout</a>
+    </nav>
+
+    <button class="dark-btn" onclick="toggleDarkMode()">
+      🌙 Dark Mode
+    </button>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Header -->
+    <header class="top-header">
+      <h1>Welcome Sandesh Reddy</h1>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="section">
+      <h2>📊 Dashboard Overview</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Total Classes</h3>
+          <p>28</p>
+        </div>
+
+        <div class="card">
+          <h3>Total Faculty</h3>
+          <p>8</p>
+        </div>
+
+        <div class="card">
+          <h3>Upcoming Exams</h3>
+          <p>6 Scheduled</p>
+        </div>
+
+        <div class="card">
+          <h3>Pending Fees</h3>
+          <p>₹ 2.4L</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notice Board -->
+    <section class="section">
+      <h2>📢 Notice Board</h2>
+
+      <ul class="notice-board">
+        <li>📌 Semester exams start from March 10</li>
+        <li>📌 Placement Drive: Infosys on Feb 25</li>
+        <li>📌 College Fest registrations open now</li>
+      </ul>
+    </section>
+
+    <!-- Student Management -->
+    <section id="students" class="section">
+      <h2>👨‍🎓 Registerd Course</h2>
+
+      <input type="text" id="searchInput" placeholder="Search courses by name..." />
+
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Course ID</th>
+            <th>Slot</th>
+            <th>Faculty Name</th>
+          </tr>
+        </thead>
+
+        <tbody id="studentTable">
+          <tr>
+            <td>Applied Statistics</td>
+            <td>MAT1011</td>
+            <td>E2</td>
+            <td>Raj Kumar</td>
+          </tr>
+          <tr>
+            <td>Software Engineering</td>
+            <td>CSE1005</td>
+            <td>B2</td>
+            <td>Swaroop</td>
+          </tr>
+          <tr>
+            <td>Computer Architecture</td>
+            <td>ECE2002</td>
+            <td>A2</td>
+            <td>Deepika Sarkar</td>
+          </tr>
+          <tr>
+            <td>DBMS</td>
+            <td>CSE2007</td>
+            <td>D1</td>
+            <td>Kiran Babu</td>
+          </tr>
+          <tr>
+            <td>STS</td>
+            <td>STS2009</td>
+            <td>C1</td>
+            <td>Mamatha</td>
+          </tr>
+          <tr>
+            <td>Machine Learning</td>
+            <td>CSE3008</td>
+            <td>E1</td>
+            <td>Suraj</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Attendance -->
+    <section id="attendance" class="section">
+      <h2>✅ Attendance Module</h2>
+      <p>Applied Statistics: <strong>92%</strong></p>
+      <p>Software Engineering: <strong>87%</strong></p>
+      <p>Computer Organization And Architecture: <strong>76%</strong></p>
+      <p>DBMS: <strong>100%</strong></p>
+      <p>STS: <strong>98%</strong></p>
+      <p>Machine Learning: <strong>79%</strong></p>
+      <button class="btn">Update</button>
+
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="section">
+      <h2>📝 Exam Results</h2>
+      <p>Latest Result Status: <strong>Published</strong></p>
+      <button class="btn">View Report Card</button>
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="section">
+      <h2>🎉 College Events</h2>
+
+      <div class="event-box">
+        <p><strong>Hackathon 2026</strong> - Register before Feb 28</p>
+        <button class="btn">Register</button>
+      </div>
+    </section>
+
+    <!-- Library -->
+    <section id="library" class="section">
+      <h2>📚 Library Tracker</h2>
+      <p>Books Issued: <strong>2</strong></p>
+      <p>Return Due: <strong>5 days</strong></p>
+      <button class="btn">View Library</button>
+    </section>
+
+    <!-- Feedback -->
+    <section id="feedback" class="section">
+      <h2>🗣 Student Feedback</h2>
+
+      <form class="feedback-form">
+        <input type="text" placeholder="Enter your name" required />
+        <textarea placeholder="Write your feedback..." required></textarea>
+        <button class="btn">Submit Feedback</button>
+      </form>
+    </section>
+
+    <!-- Digital ID Card -->
+    <section class="section">
+      <h2>🪪 Digital Student ID Card</h2>
+
+      <div class="id-card">
+        <h3>SmartCampus ID</h3>
+        <p><strong>Name:</strong> Sandesh Reddy</p>
+        <p><strong>Roll No:</strong> CS101</p>
+        <p><strong>Dept:</strong> Computer Science</p>
+        <p class="qr">⬛ QR Code Placeholder</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 SmartCampus Portal | Frontend College Management System</p>
+    </footer>
+
+  </main>
+
+  <!-- Link JavaScript -->
+  <script src="student.js"></script>
+</body>
+</html>

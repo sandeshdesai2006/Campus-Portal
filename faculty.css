@@ -1,0 +1,424 @@
+/* =========================================
+   SMARTCAMPUS PORTAL - COMPLETE CSS
+   Works for: Login + Student + Faculty Pages
+   ========================================= */
+
+/* ---------- Global Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Body ---------- */
+body {
+  background: #f4f6fb;
+  color: #222;
+}
+
+/* =========================================
+   SIDEBAR (Common for Student + Faculty)
+   ========================================= */
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  padding: 25px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: #1e293b;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Sidebar Navigation Links */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: #cbd5e1;
+  padding: 12px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+  background: #334155;
+  color: white;
+}
+
+/* Dark Mode Button at Bottom */
+.dark-btn {
+  margin-top: auto;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #0ea5e9;
+  color: white;
+  cursor: pointer;
+}
+
+.dark-btn:hover {
+  background: #0284c7;
+}
+
+/* =========================================
+   MAIN CONTENT (Fix Alignment)
+   ========================================= */
+
+.main-content {
+  margin-left: 250px;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+/* Header */
+.top-header {
+  margin-bottom: 25px;
+}
+
+.top-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.top-header p {
+  margin-top: 5px;
+  color: gray;
+}
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
+.section {
+  margin: 30px 0;
+  padding: 25px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+/* =========================================
+   DASHBOARD CARDS
+   ========================================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: #0ea5e9;
+  color: white;
+  padding: 18px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card p {
+  font-size: 22px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/* =========================================
+   NOTICE BOARD
+   ========================================= */
+
+.notice-board {
+  list-style: none;
+}
+
+.notice-board li {
+  background: #f1f5f9;
+  padding: 12px;
+  margin: 10px 0;
+  border-left: 5px solid #0ea5e9;
+  border-radius: 10px;
+}
+
+/* =========================================
+   TABLE + SEARCH
+   ========================================= */
+
+#searchInput {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #1e293b;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #0ea5e9;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #0284c7;
+}
+
+/* =========================================
+   DIGITAL ID CARD
+   ========================================= */
+
+.id-card {
+  max-width: 320px;
+  padding: 18px;
+  background: #f1f5f9;
+  border-radius: 15px;
+}
+
+.id-card h3 {
+  color: #0ea5e9;
+  margin-bottom: 10px;
+}
+
+.qr {
+  margin-top: 12px;
+  padding: 10px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* =========================================
+   FEEDBACK FORM
+   ========================================= */
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.feedback-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* =========================================
+   FACULTY PAGE SPECIAL THEME
+   ========================================= */
+
+.faculty-sidebar {
+  background: linear-gradient(to bottom, #4c1d95, #1e293b);
+}
+
+.faculty-list {
+  list-style: none;
+}
+
+.faculty-list li {
+  background: #f8fafc;
+  padding: 14px;
+  margin: 12px 0;
+  border-left: 6px solid #4c1d95;
+  border-radius: 12px;
+}
+
+.faculty-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faculty-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.feedback-box {
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 12px;
+  background: #f5f3ff;
+  border-left: 6px solid #4c1d95;
+}
+
+/* =========================================
+   LOGIN PAGE
+   ========================================= */
+
+.login-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(to right, #0ea5e9, #1e293b);
+}
+
+.login-container {
+  width: 850px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.login-left {
+  width: 50%;
+  padding: 40px;
+  background: #1e293b;
+  color: white;
+}
+
+.login-right {
+  width: 50%;
+  padding: 40px;
+}
+
+.login-right form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-right input,
+.login-right select {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.btn-login {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #0ea5e9;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background: #0284c7;
+}
+
+/* =========================================
+   DARK MODE SUPPORT
+   ========================================= */
+
+.dark-mode {
+  background: #0f172a;
+  color: white;
+}
+
+.dark-mode .section {
+  background: #1e293b;
+  color: white;
+}
+
+.dark-mode table thead {
+  background: black;
+}
+
+.dark-mode .notice-board li {
+  background: #334155;
+}
+
+.dark-mode .id-card {
+  background: #334155;
+}
+
+.dark-mode .feedback-box {
+  background: #334155;
+  color: white;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media(max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .login-container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .login-left,
+  .login-right {
+    width: 100%;
+  }
+}

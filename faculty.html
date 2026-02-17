@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty Dashboard | SmartCampus</title>
+
+  <link rel="stylesheet" href="faculty.css" />
+</head>
+
+<body>
+
+  <!-- Faculty Sidebar -->
+  <aside class="sidebar faculty-sidebar">
+    <h2 class="logo">👨‍🏫 Faculty Panel</h2>
+
+    <nav>
+      <a href="#classes">My Classes</a>
+      <a href="#attendance">Mark Attendance</a>
+      <a href="#marks">Upload Marks</a>
+      <a href="#feedback">Student Feedback</a>
+      <a href="login.html">Logout</a>
+    </nav>
+
+    <button class="dark-btn" onclick="toggleDarkMode()">
+      🌙 Dark Mode
+    </button>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <header class="top-header">
+      <h1>Welcome Faculty Member</h1>
+      <p></p>
+    </header>
+
+    <!-- Classes Section -->
+    <section id="classes" class="section">
+      <h2>📘 My Assigned Classes</h2>
+
+      <ul class="faculty-list">
+        <li>Data Structures - CSE 2nd Year</li>
+        <li>Database Systems - IT 3rd Year</li>
+        <li>Computer Networks - CSE 4th Year</li>
+      </ul>
+    </section>
+
+    <!-- Attendance Section -->
+    <section id="attendance" class="section">
+      <h2>✅ Mark Attendance</h2>
+
+      <button class="btn" onclick="markAttendance()">
+        Mark Today’s Attendance
+      </button>
+
+      <p id="attendanceStatus"></p>
+    </section>
+
+    <!-- Marks Upload -->
+    <section id="marks" class="section">
+      <h2>📝 Upload Student Marks</h2>
+
+      <form class="faculty-form" onsubmit="uploadMarks(event)">
+        <input type="text" placeholder="Slot" required />
+        <input type="text" placeholder="Student Reg No" required />
+        <input type="number" placeholder="Marks Obtained" required />
+
+        <button class="btn">Upload</button>
+      </form>
+
+      <p id="marksStatus"></p>
+    </section>
+
+    <!-- Feedback Review -->
+    <section id="feedback" class="section">
+      <h2>⭐ Student Feedback</h2>
+
+      <div class="feedback-box">
+        <p><strong>Course:</strong> Database Systems</p>
+        <p>“Very interactive classes, good explanations.”</p>
+      </div>
+
+      <div class="feedback-box">
+        <p><strong>Course:</strong> Data Structures</p>
+        <p>“Need more problem-solving sessions.”</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 SmartCampus Faculty Portal</p>
+    </footer>
+
+  </main>
+
+  <script src="faculty.js"></script>
+</body>
+</html>
