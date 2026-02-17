@@ -25,3 +25,8 @@ function uploadMarks(event) {
     status.style.fontWeight = "600";
   }
 }
+function logout() {
+  alert("Logging out...");
+  window.location.href = "index.html";
+}
+
