@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | smart Campus Portal</title>
+
+  <link rel="stylesheet" href="student.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="login-body">
+
+  <div class="login-container">
+
+<div class="login-left">
+  <h1>🎓 Campus Portal</h1>
+
+  <!-- University Logo -->
+  <img src="logo.png" alt="University Logo" class="login-logo">
+
+
+</div>
+
+
+    <!-- Right Section -->
+    <div class="login-right">
+
+      <h2>Login Account</h2>
+      <p>Select role and continue</p>
+      
+<form id="loginForm">
+
+  <label>Select Role</label>
+  <select id="roleSelect" required>
+    <option value="">-- Choose Role --</option>
+    <option value="student">Student</option>
+    <option value="faculty">Faculty</option>
+  </select>
+
+  <label>Username</label>
+  <input type="text" placeholder="Enter username" required />
+
+  <label>Password</label>
+  <input type="password" placeholder="Enter password" required />
+
+  <button type="submit" class="btn-login">
+    Login →
+  </button>
+
+</form>
+
+
+
+    </div>
+
+  </div>
+
+  <script src="student.js"></script>
+</body>
+</html>
