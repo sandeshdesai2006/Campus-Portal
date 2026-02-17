@@ -105,3 +105,9 @@ buttons.forEach((btn) => {
     alert("This feature is part of the SmartCampus frontend demo!");
   });
 });
+function logout() {
+  alert("Logging out...");
+  window.location.href = "index.html";
+}
+
+
